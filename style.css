@@ -18,7 +18,8 @@
     margin: 0px;
     padding: 0px;
     font-family: var(--geral);
-    color: white;
+    font-weight: normal;
+    color: black
 }
 
 body {
@@ -44,32 +45,48 @@ header {
 main {
     margin-top: 15px;
     display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.747);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+.total {
+    display: flex;
     flex-flow: row wrap;
     justify-content: center;
 }
 
-#principal {
-    padding: 10px;
-    flex-basis: 800px;
-    background-color: rgba(0, 0, 0, 0.692);
-    border-radius: 20px 0px 20px;
-    backdrop-filter: blur(8.5px);
-    -webkit-backdrop-filter: blur(8.5px);
-}
+
 
 hr {
-    border-color: brown;
+    border-color: rgba(141, 28, 28, 0.541);
+    border-style: solid;
 }
 
-#nome {
-    background-color: rgba(255, 255, 255, 0.596);
-    height: 20px;
+#menu {
+    background-color: rgba(245, 222, 179, 0);
+    height: 30px;
+    width: 250px;
+    border-style: none;
+    text-align: center;
 }
 
+.item {
+    flex-basis: 800px;
+    padding: 5px;
+}
+
+#bloco2 {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
 @media screen and (min-width: 480px) and (max-width: 800px) {
     h1 {
         text-align: center;
-        font-size: 1em;
+        font-size: 1.2em;
     }
     
 }

@@ -11,11 +11,39 @@
         <div id="titulo"></div>
     </header>
     <main>
-        <div id="principal">
-            <h1>Crie sua ficha de RPG</h1>
-            <hr>
-            <p><label for="nome">Nome: </label><input type="text" id="nome" autocomplete="off" minlength="10" maxlength="20" required placeholder="Nome do personagem"></p>
+        <div class="total">
+            <div class="item">
+                <h1>Crie sua ficha de RPG</h1>
+                <hr>
+            </div>
+            <div class="item">
+                <p><label for="nome">Nome: </label><input type="text" id="menu" autocomplete="off" maxlength="30" required placeholder="digite o nome do(a) personagem"></p>
+                <hr>
+            </div>
+            <div class="item" id="bloco2">
+                <p>Gênero:
+                    <select name="genero" id="menu">
+                        <option>Masculino</option>
+                        <option>Feminino</option>
+                    </select>
+                </p>
+                <p>Raça: 
+                    <select name="raca" id="menu">
+                        <option>Humano</option>
+                        <option>Elfo</option>
+                        <option>Anão</option>
+                        <option>Ogro</option>
+                        <option>Elfo-Noturno</option>
+                        <option>Goblin</option>
+                    </select>
+                </p>
+               
+                <div class="item"><h1>Atributos</h1></div>
+            </div>
+            
         </div>
+       
+        
     </main>
 </body>
 </html>
