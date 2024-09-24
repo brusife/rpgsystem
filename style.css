@@ -53,6 +53,8 @@ main {
     flex-basis: 800px;
     background-color: rgba(0, 0, 0, 0.692);
     border-radius: 20px 0px 20px;
+    backdrop-filter: blur(8.5px);
+    -webkit-backdrop-filter: blur(8.5px);
 }
 
 hr {
