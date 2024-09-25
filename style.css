@@ -19,7 +19,7 @@
     padding: 0px;
     font-family: var(--geral);
     font-weight: normal;
-    color: black
+    color: black;
 }
 
 body {
@@ -68,10 +68,23 @@ hr {
 #menu {
     background-color: rgba(245, 222, 179, 0);
     height: 30px;
-    width: 250px;
+    font-size: 1.1em;
+    border-style: none;
+    text-align: center;
+    
+}
+
+#nome {
+    margin-bottom: 4px;
+    background-color: rgba(255, 255, 255, 0);
+    height: 35px;
+    width: 400px;
+    font-size: 1.1em;
     border-style: none;
     text-align: center;
 }
+
+
 
 .item {
     flex-basis: 800px;
@@ -83,10 +96,65 @@ hr {
     flex-flow: row wrap;
     justify-content: space-between;
 }
-@media screen and (min-width: 480px) and (max-width: 800px) {
+
+p {
+    font-size: 1.1em;
+}
+
+.barra {
+    padding: 3px;
+    margin-left: 5px;
+    height: 3px;
+    accent-color: #8d1c1c8a;
+}
+ 
+
+
+textarea {
+    resize: none;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: normal;
+    font-size: 1.1em;
+    padding: 10px;
+}
+
+.botao {
+    width: 170px;
+    height: 64px;
+    background: url(icones/criar.png);
+    background-repeat: no-repeat;
+    cursor: pointer;
+    border-style: none;
+    font-family: var(--principal);
+    font-size: 1.5em;
+
+}
+
+/* TELA MÉDIA*/
+
+@media screen and (max-width: 800px) {
     h1 {
         text-align: center;
         font-size: 1.2em;
+    }
+    p {
+        font-size: .9em;
+    }
+
+    textarea {
+        display: block;
+        margin: auto;
+        resize: none;
+        width: 340px;
+        height: 150px;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: normal;
+        padding: 5px;
+    }
+
+    .botao {
+        width: 100px;
+        background-size: contain;
     }
     
 }
