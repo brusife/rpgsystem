@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPG System - Sua ficha de RPG grátis</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div id="titulo"></div>
+    </header>
+    <main>
+        <form action="ficha.php" method="post">
+            <div class="total">
+                <div class="item">
+                    <h1>Crie sua ficha de RPG</h1>
+                    <hr>
+                </div>
+                <div class="item">
+                    <p><label for="nome">Nome: </label><input type="text" id="nome" autocomplete="off" maxlength="30" required placeholder="até 30 caracteres"></p>
+                    <hr>
+                </div>
+                <div class="item" id="bloco2">
+                    <p>Gênero:
+                        <select name="genero" id="menu">
+                            <option>Masculino</option>
+                            <option>Feminino</option>
+                        </select>
+                    </p>
+                    <hr>
+                    <p>Raça:
+                        <select name="raca" id="menu">
+                            <option>Humano</option>
+                            <option>Elfo</option>
+                            <option>Anão</option>
+                            <option>Ogro</option>
+                            <option>Elfo-Noturno</option>
+                            <option>Goblin</option>
+                        </select>
+                    </p>
+                    <hr>
+                    <p>Classe: 
+                        <select name="classe" id="menu">
+                            <option>Bárbaro</option>
+                            <option>Bardo</option>
+                            <option>Bruxo</option>
+                            <option>Caçador</option>
+                            <option>Clérigo</option>
+                            <option>Druida</option>
+                            <option>Feiticeiro</option>
+                            <option>Guerreiro</option>
+                            <option>Ladino</option>
+                            <option>Mago</option>
+                            <option>Monge</option>
+                            <option>Paladino</option>
+                        </select>
+                    </p>
+
+                    <div class="item"><h1>Atributos</h1>
+            
+                        <hr>
+                    <p><img src="icones/forca.png" alt="ícone de força" height="18px"> Força <input type="range" name="for" id="ifor" class="barra" min="0" max="10" step="1" value="5" oninput="vfor.innerHTML = Number(ifor.value)"><output id="vfor">5</output></p>
+                    <p><img src="icones/destreza.png" alt="ícone de destreza" height="18px"> Destreza <input type="range" name="dex" id="idex" class="barra" min="0" max="10" step="1" value="5" oninput="vdes.innerHTML = Number(idex.value)"><output id="vdes">5</output></p>
+                    <p><img src="icones/agilidade.png" alt="ícone de agilidade" height="18px"> Agilidade <input type="range" name="agi" id="iagi" class="barra" min="0" max="10" step="1" value="5" oninput="vagi.innerHTML = Number(iagi.value)"><output id="vagi">5</output></p>
+                    <p><img src="icones/inteligencia.png" alt="ícone de inteligência" height="18px"> Inteligência <input type="range" name="int" id="iint" class="barra" min="0" max="10" step="1" value="5" oninput="vint.innerHTML = Number(iint.value)"><output id="vint">5</output></p>
+                    <p><img src="icones/devocao.png" alt="ícone de devoção" height="18px"> Devoção <input type="range" name="dev" id="idev" class="barra" min="0" max="10" step="1" value="5" oninput="vdev.innerHTML = Number(idev.value)"><output id="vdev">5</output></p>
+                    <p><img src="icones/sorte.png" alt="ícone de sorte" height="18px"> Sorte <input type="range" name="sor" id="isor" class="barra" min="0" max="10" step="1" value="5" oninput="vsor.innerHTML = Number(isor.value)"><output id="vsor">5</output></p>
+                    <hr>
+                    </div>
+            
+                    <div class="item"><h1>Descrição</h1>
+            
+                        <p><textarea name="info" id="info" cols="75" rows="7" maxlength="300">Descreva o(a) personagem em até 300(trezentos) caracteres</textarea></p>
+            
+                    </div>
+                    <div class="item">
+                        <h1><input type="submit" value="" class="botao"></h1>
+                    </div>
+            
+                </div>
+            
+            </div>
+        </form>
+       
+        
+    </main>
+</body>
+</html>
