@@ -6,9 +6,11 @@
     <title>RPG System - Ficha de Personagem</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="fichastyle.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.2/html2pdf.bundle.min.js" integrity="sha512-MpDFIChbcXl2QgipQrt1VcPHMldRILetapBl5MPCA9Y8r7qvlwx1/Mc9hNTzY+kS5kX6PdoDq41ws1HiVNLdZA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <main>
+    <main id="content">
         <div class="item">
             <div class="item"id="moldura">
                 <h1>Claire Fraser, a Curandeira</h1>
@@ -39,6 +41,7 @@
         </div>
         
         <a href="javascript:history.back()" class="botao">Fazer outro personagem</a>
+        <button id ="generate-pdf" class="botao">Gerar PDF</button>
     </main>  
 </body>
 </html>
