@@ -19,7 +19,7 @@
             background: <?php
                 $classe = $_GET["classe"];
                 $gen = $_GET["genero"];
-                
+
                 if($classe=="Bárbaro"&&$gen=="Masculino") {
                     echo "url(fundos/barbaro.jpg)";
                 }elseif($classe=="Bárbaro"&&$gen=="Feminino") {
@@ -92,23 +92,111 @@
             <div class="subitem">
                 <h1>Descrição</h1>
                 <hr>
-                <p id ="sobre">Descrição do personagem em até 300 caracteres...Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae ex omnis delectus enim blanditiis eligendi nesciunt odio aspernatur nemo? Iusto sunt molestiae natus officiis nesciunt quam doloribus vero impedit. Veritatis! Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <p id ="sobre"><?php 
+                echo $_GET["info"];
+                ?></p>
                 <hr>
             </div>
             <div class="subitem">
                 <h1>Atributos</h1>
                 <p id="trib">
-                    <img src="icones/forca.png" alt="ícone de força" class="icone"><span class="valor"> 5 |</span>
-                    <img src="icones/destreza.png" alt="ícone de destreza" class="icone"><span class="valor"> 5 |</span>
-                    <img src="icones/agilidade.png" alt="ícone de agilidade" class="icone"><span class="valor"> 5 |</span>
-                    <img src="icones/inteligencia.png" alt="ícone de inteligência" class="icone"><span class="valor"> 5 |</span>
-                    <img src="icones/devocao.png" alt="ícone de devoção" class="icone"><span class="valor"> 5 |</span>
-                    <img src="icones/sorte.png" alt="ícone de sorte" class="icone"><span class="valor"> 5 |</span>
+                    <?php
+                    
+                    if($classe=="Bárbaro"){
+                        $pfor = "(+5)";
+                        $pint = "(-4)";
+                        $_GET["for"] =  $_GET["for"].$pfor;
+                        $_GET["int"] = $_GET["int"].$pint;
+                        $bonus = "<img src='icones/forca.png' class='icone'> <span class='valor'>+5</span> de Força </br> <img src='icones/inteligencia.png' class='icone'> <span class='valor'>-4</span> de Inteligência";
+                    }elseif($classe=="Bardo"){
+                        $pdex = "(+3)";
+                        $psor = "(+3)";
+                        $_GET["dex"] =  $_GET["dex"].$pdex;
+                        $_GET["sor"] = $_GET["sor"].$psor;
+                        $bonus = "<img src='icones/destreza.png' class='icone'> <span class='valor'>+3</span> de Destreza </br> <img src='icones/sorte.png' class='icone'> <span class='valor'>+3</span> de Sorte";
+                    }elseif($classe=="Bruxo"){
+                        $pint = "(+5)";
+                        $pdev = "(-4)";
+                        $_GET["int"] =  $_GET["int"].$pint;
+                        $_GET["dev"] = $_GET["dev"].$pdev;
+                        $bonus = "<img src='icones/inteligencia.png' class='icone'> <span class='valor'>+5</span> de Inteligência </br> <img src='icones/devocao.png' class='icone'> <span class='valor'>-4</span> de Devoção";
+                    }elseif($classe=="Bruxo"){
+                        $pint = "(+5)";
+                        $pdev = "(-4)";
+                        $_GET["int"] =  $_GET["int"].$pint;
+                        $_GET["dev"] = $_GET["dev"].$pdev;
+                        $bonus = "<img src='icones/inteligencia.png' class='icone'> <span class='valor'>+5</span> de Inteligência </br> <img src='icones/devocao.png' class='icone'> <span class='valor'>-4</span> de Devoção";
+                    }elseif($classe=="Caçador"){
+                        $pdex = "(+3)";
+                        $pagi = "(+3)";
+                        $_GET["dex"] =  $_GET["dex"].$pdex;
+                        $_GET["agi"] = $_GET["agi"].$pagi;
+                        $bonus = "<img src='icones/destreza.png' class='icone'> <span class='valor'>+3</span> de Destreza </br> <img src='icones/agilidade.png' class='icone'> <span class='valor'>+3</span> de Agilidade";
+                    }elseif($classe=="Clérigo"){
+                        $pint = "(+3)";
+                        $pdev = "(+4)";
+                        $_GET["int"] =  $_GET["int"].$pint;
+                        $_GET["dev"] = $_GET["dev"].$pdev;
+                        $bonus = "<img src='icones/inteligencia.png' class='icone'> <span class='valor'>+3</span> de Inteligência </br> <img src='icones/devocao.png' class='icone'> <span class='valor'>+4</span> de Devoção";
+                    }elseif($classe=="Druida"){
+                        $pint = "(+3)";
+                        $psor = "(+3)";
+                        $_GET["int"] =  $_GET["int"].$pint;
+                        $_GET["sor"] = $_GET["sor"].$psor;
+                        $bonus = "<img src='icones/inteligencia.png' class='icone'> <span class='valor'>+3</span> de Inteligência </br> <img src='icones/sorte.png' class='icone'> <span class='valor'>+3</span> de Sorte";
+                    }elseif($classe=="Feiticeiro"){
+                        $pint = "(+6)";
+                        $pdev = "(-2)";
+                        $_GET["int"] =  $_GET["int"].$pint;
+                        $_GET["dev"] = $_GET["dev"].$pdev;
+                        $bonus = "<img src='icones/inteligencia.png' class='icone'> <span class='valor'>+6</span> de Inteligência </br> <img src='icones/devocao.png' class='icone'> <span class='valor'>-2</span> de Devoção";
+                    }elseif($classe=="Guerreiro"){
+                        $pfor = "(+3)";
+                        $pagi = "(+3)";
+                        $_GET["for"] =  $_GET["for"].$pfor;
+                        $_GET["agi"] = $_GET["agi"].$pagi;
+                        $bonus = "<img src='icones/forca.png' class='icone'> <span class='valor'>+3</span> de Força </br> <img src='icones/agilidade.png' class='icone'> <span class='valor'>+3</span> de Agilidade";
+                    }elseif($classe=="Ladino"){
+                        $pagi = "(+3)";
+                        $psor = "(+3)";
+                        $_GET["agi"] =  $_GET["agi"].$pagi;
+                        $_GET["sor"] = $_GET["sor"].$psor;
+                        $bonus = "<img src='icones/agilidade.png' class='icone'> <span class='valor'>+3</span> de Agilidade </br> <img src='icones/sorte.png' class='icone'> <span class='valor'>+3</span> de Sorte";
+                    }elseif($classe=="Mago"){
+                        $pint = "(+5)";
+                        $pfor = "(-4)";
+                        $_GET["int"] =  $_GET["int"].$pint;
+                        $_GET["for"] = $_GET["for"].$pfor;
+                        $bonus = "<img src='icones/inteligencia.png' class='icone'> <span class='valor'>+5</span> de Inteligência </br> <img src='icones/forca.png' class='icone'> <span class='valor'>-4</span> de Força";
+                    }elseif($classe=="Monge"){
+                        $pagi = "(+3)";
+                        $pdev = "(+3)";
+                        $_GET["agi"] =  $_GET["agi"].$pagi;
+                        $_GET["dev"] = $_GET["dev"].$pdev;
+                        $bonus = "<img src='icones/agilidade.png' class='icone'> <span class='valor'>+3</span> de Agilidade </br> <img src='icones/devocao.png' class='icone'> <span class='valor'>+3</span> de Devoção";
+                    }elseif($classe=="Paladino"){
+                        $pfor = "(+3)";
+                        $pdev = "(+3)";
+                        $_GET["for"] =  $_GET["for"].$pfor;
+                        $_GET["dev"] = $_GET["dev"].$pdev;
+                        $bonus = "<img src='icones/forca.png' class='icone'> <span class='valor'>+3</span> de Força </br> <img src='icones/devocao.png' class='icone'> <span class='valor'>+3</span> de Devoção";
+                    }
+                    
+                    ?>
+                    <img src="icones/forca.png" alt="ícone de força" class="icone"><span class="valor"> <?php echo $_GET["for"]; ?> |</span>
+                    <img src="icones/destreza.png" alt="ícone de destreza" class="icone"><span class="valor"> <?php echo $_GET["dex"]; ?> |</span>
+                    <img src="icones/agilidade.png" alt="ícone de agilidade" class="icone"><span class="valor"> <?php echo $_GET["agi"]; ?> |</span>
+                    <img src="icones/inteligencia.png" alt="ícone de inteligência" class="icone"><span class="valor"> <?php echo $_GET["int"]; ?> |</span>
+                    <img src="icones/devocao.png" alt="ícone de devoção" class="icone"><span class="valor"> <?php echo $_GET["dev"]; ?> |</span>
+                    <img src="icones/sorte.png" alt="ícone de sorte" class="icone"><span class="valor"> <?php echo $_GET["sor"]; ?> |</span>
                 </p>
                 <hr>
-                <h1>Bônus</h1>
-                <p id="trib"><img src="icones/sorte.png" class="icone"> <span class="valor">+2</span> de sorte por ser Bardo</p>
+                <h1>Bônus de classe</h1>
+                <p id="trib"><?php echo $bonus;?></p>
                 <hr>
+            </div>
+            <div class="subitem" id="inst">
+                    <p id="trib">Para gerar seu arquivo em PDF, clique em "Imprimir/Gerar PDF", depois você deve habilitar a impressão dos gráficos da página, tirar as margens e cabeçalhos, depois em "Salvar PDF"</p>
             </div>
             
         </div>
