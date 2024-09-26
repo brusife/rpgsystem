@@ -1,16 +1,15 @@
-const btnGenerate = document.querySelector("#generate-pdf");
 
-btnGenerate.addEventListener("click", () => {
-    // Conteúdo do PDF
-    const content = document.querySelector("#content");
-
-    //Configuração do arquivo final em PDF
-    const options = {
-        margin: [0],
-        filename: "ficha.pdf",
-        jsPDF: {unit: "mm", format: "a4", orientation: "portrait"},
+function downloadPDF() {
+    const item = document.querySelector(".Content");
+  
+    var opt = {
+      margin: [0,0,0,0],
+      filename: "ficha.pdf",
+      html2canvas: { scale: 2, dpi: 300, letterRendering: true },
+      jsPDF: { unit: 'mm', orientation: 'portrait'},
+      pageBreak: { mode: 'css'},
+      compressPDF: true
     };
-
-    //Gerar e baixar o PDF
-    html2pdf().set(options).from(content).save();
-})
+  
+    html2pdf().set(opt).from(item).save();
+  }
