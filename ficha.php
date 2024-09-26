@@ -1,20 +1,90 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RPG System - Ficha de Personagem</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="fichastyle.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
+    <?php 
+    $raca = $_GET["raca"];
+    if ($raca=="Ogro"||$raca=="Elfo-Noturno"||$raca=="Goblin"){
+        echo "<link rel='stylesheet' href='fichadark.css'>";
+    }else {
+        echo "<link rel='stylesheet' href='fichastyle.css'>";
+    }
+    ?>
+    <style>
+        .item {
+            background: <?php
+                $classe = $_GET["classe"];
+                $gen = $_GET["genero"];
+                
+                if($classe=="Bárbaro"&&$gen=="Masculino") {
+                    echo "url(fundos/barbaro.jpg)";
+                }elseif($classe=="Bárbaro"&&$gen=="Feminino") {
+                    echo "url(fundos/barbara.jpg)";
+                }elseif($classe=="Bardo"&&$gen=="Masculino") {
+                    echo "url(fundos/bardo.jpg)";
+                }elseif($classe=="Bardo"&&$gen=="Feminino") {
+                    echo "url(fundos/barda.jpg)";
+                }elseif($classe=="Bruxo"&&$gen=="Masculino") {
+                    echo "url(fundos/bruxo.jpg)";
+                }elseif($classe=="Bruxo"&&$gen=="Feminino") {
+                    echo "url(fundos/bruxa.jpg)";
+                }elseif($classe=="Caçador"&&$gen=="Masculino") {
+                    echo "url(fundos/cacador.jpg)";
+                }elseif($classe=="Caçador"&&$gen=="Feminino") {
+                    echo "url(fundos/cacadora.jpg)";
+                }elseif($classe=="Clérigo"&&$gen=="Masculino") {
+                    echo "url(fundos/clerigo.jpg)";
+                }elseif($classe=="Clérigo"&&$gen=="Feminino") {
+                    echo "url(fundos/cleriga.jpg)";
+                }elseif($classe=="Druida"&&$gen=="Masculino") {
+                    echo "url(fundos/druidam.jpg)";
+                }elseif($classe=="Druida"&&$gen=="Feminino") {
+                    echo "url(fundos/druidaf.jpg)";
+                }elseif($classe=="Feiticeiro"&&$gen=="Masculino") {
+                    echo "url(fundos/feiticeiro.jpg)";
+                }elseif($classe=="Feiticeiro"&&$gen=="Feminino") {
+                    echo "url(fundos/feiticeira.jpg)";
+                }elseif($classe=="Guerreiro"&&$gen=="Masculino") {
+                    echo "url(fundos/guerreiro.jpg)";
+                }elseif($classe=="Guerreiro"&&$gen=="Feminino") {
+                    echo "url(fundos/guerreira.jpg)";
+                }elseif($classe=="Ladino"&&$gen=="Masculino") {
+                    echo "url(fundos/ladino.jpg)";
+                }elseif($classe=="Ladino"&&$gen=="Feminino") {
+                    echo "url(fundos/ladina.jpg)";
+                }elseif($classe=="Mago"&&$gen=="Masculino") {
+                    echo "url(fundos/mago.jpg)";
+                }elseif($classe=="Mago"&&$gen=="Feminino") {
+                    echo "url(fundos/maga.jpg)";
+                }elseif($classe=="Monge"&&$gen=="Masculino") {
+                    echo "url(fundos/monge.jpg)";
+                }elseif($classe=="Monge"&&$gen=="Feminino") {
+                    echo "url(fundos/monja.jpg)";
+                }elseif($classe=="Paladino"&&$gen=="Masculino") {
+                    echo "url(fundos/barbara.jpg)";
+                }elseif($classe=="Paladino"&&$gen=="Feminino") {
+                    echo "url(fundos/barbara.jpg)";
+                }
+                
+                ?>
+        }
+    </style>
+    
 </head>
 <body class="Content">
     <main>
         <div class="item">
             <div class="item"id="moldura">
-                <h1>Brigona de Montesquieu</h1>
-                <h1>Classe: <span id="sub">Clériga</span> | Raça: <span id="sub">Humana</span></h1>
+                <h1><?php
+                 $nome = $_GET["nome"];
+                 echo $nome; 
+                 ?>
+                 </h1>
+                <h1 id="subt">Classe: <span id="sub"><?php echo $classe; ?></span> | Raça: <span id="sub"><?php echo $raca; ?></span></h1>
                 
             </div>
         </div>
