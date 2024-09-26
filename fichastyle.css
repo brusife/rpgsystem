@@ -69,6 +69,8 @@ main {
     background: url(moldura1.png);
     background-position: center bottom;
     background-repeat: no-repeat;
+    background-size: cover;
+    flex-basis: 447px;
 }
 
 #moldura > h1 {
@@ -100,7 +102,7 @@ hr {
 }
 
 .subitem {
-    flex-basis: 500px;
+    flex-basis: 680px;
 }
 
 .subitem >p {
@@ -108,7 +110,7 @@ hr {
 }
 
 .icone {
-    width: 20px;
+    width: 24px;
     filter: invert(20%);
 }
 
@@ -162,5 +164,23 @@ p#trib {
 
     .print {
         display: block;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    p {
+        font-size: .8em;
+    }
+    h1 {
+        font-size: 1.2em;
+    }
+    .botao {
+        font-size: 1em;
+    }
+    #moldura > h1 {
+        font-size: 1.8em;
+    }
+    #moldura {
+        width: 100%;
     }
 }
