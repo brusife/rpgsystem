@@ -46,6 +46,7 @@ body {
     background-color: rgba(0, 0, 0, 0.877);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
+    box-shadow: 3px 0px 10px rgba(0, 0, 0, 0.76);
 }
 
 h1 {
