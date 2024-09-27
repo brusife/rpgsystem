@@ -8,7 +8,7 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <?php 
     $raca = $_GET["raca"];
-    if ($raca=="Ogro"||$raca=="Elfo-Noturno"||$raca=="Goblin"){
+    if ($raca=="Orc"||$raca=="Elfo-Noturno"||$raca=="Goblin"){
         echo "<link rel='stylesheet' href='fichadark.css'>";
     }else {
         echo "<link rel='stylesheet' href='fichastyle.css'>";
@@ -16,16 +16,321 @@
     ?>
     <style>
         .item {
-            background: <?php
+            background-image: <?php
                 $classe = $_GET["classe"];
                 $gen = $_GET["genero"];
-
+                $raca = $_GET["raca"];
+                //BÁRBAROS
                 if($classe=="Bárbaro"&&$gen=="Masculino"&&$raca=="Humano") {
                     echo "url(fundos/humano-barbaro.jpg);";
-                }elseif($classe=="Bárbaro"&&$gen=="Feminino"&&$$raca=="Humano") {
-                    echo "url(fundos/humana-barbara.jfif);";
-                }elseif($classe=="Bárbaro"&&$gen=="Masculino"&&$$raca=="Elfo") {
-                    echo "url(fundos/elfo-barbaro.jfif);";
+                }elseif($classe=="Bárbaro"&&$gen=="Feminino"&&$raca=="Humano") {
+                    echo "url(fundos/humana-barbara.jpg);";
+                }elseif($classe=="Bárbaro"&&$gen=="Masculino"&&$raca=="Elfo") {
+                    echo "url(fundos/elfo-barbaro.jpg);";
+                }elseif($classe=="Bárbaro"&&$gen=="Feminino"&&$raca=="Elfo") {
+                    echo "url(fundos/elfa-barbara.jpg);";
+                }elseif($classe=="Bárbaro"&&$gen=="Masculino"&&$raca=="Anão") {
+                    echo "url(fundos/anao-barbaro.jpg);";
+                }elseif($classe=="Bárbaro"&&$gen=="Feminino"&&$raca=="Anão") {
+                    echo "url(fundos/ana-barbara.jpg);";
+                }elseif($classe=="Bárbaro"&&$gen=="Masculino"&&$raca=="Orc") {
+                    echo "url(fundos/orc-barbaro.jpg);";
+                }elseif($classe=="Bárbaro"&&$gen=="Feminino"&&$raca=="Orc") {
+                    echo "url(fundos/orcf-barbara.jpg);";
+                }elseif($classe=="Bárbaro"&&$gen=="Masculino"&&$raca=="Elfo-Noturno") {
+                    echo "url(fundos/elfon-barbaro.jpg);";
+                }elseif($classe=="Bárbaro"&&$gen=="Feminino"&&$raca=="Elfo-Noturno") {
+                    echo "url(fundos/elfan-barbara.jpg);";
+                }elseif($classe=="Bárbaro"&&$gen=="Masculino"&&$raca=="Goblin") {
+                    echo "url(fundos/goblin-barbaro.jpg);";
+                }elseif($classe=="Bárbaro"&&$gen=="Feminino"&&$raca=="Goblin") {
+                    echo "url(fundos/goblinf-barbara.jpg);";                    
+                }
+                //BARDO
+                elseif($classe=="Bardo"&&$gen=="Masculino"&&$raca=="Humano") {
+                    echo "url(fundos/humano-bardo.jpg);";
+                }elseif($classe=="Bardo"&&$gen=="Feminino"&&$raca=="Humano") {
+                    echo "url(fundos/humana-barda.jpg);";
+                }elseif($classe=="Bardo"&&$gen=="Masculino"&&$raca=="Elfo") {
+                    echo "url(fundos/elfo-bardo.jpg);";
+                }elseif($classe=="Bardo"&&$gen=="Feminino"&&$raca=="Elfo") {
+                    echo "url(fundos/elfa-barda.jpg);";
+                }elseif($classe=="Bardo"&&$gen=="Masculino"&&$raca=="Anão") {
+                    echo "url(fundos/anao-bardo.jpg);";
+                }elseif($classe=="Bardo"&&$gen=="Feminino"&&$raca=="Anão") {
+                    echo "url(fundos/ana-barda.jpg);";
+                }elseif($classe=="Bardo"&&$gen=="Masculino"&&$raca=="Orc") {
+                    echo "url(fundos/orc-bardo.jpg);";
+                }elseif($classe=="Bardo"&&$gen=="Feminino"&&$raca=="Orc") {
+                    echo "url(fundos/orcf-barda.jpg);";
+                }elseif($classe=="Bardo"&&$gen=="Masculino"&&$raca=="Elfo-Noturno") {
+                    echo "url(fundos/elfon-bardo.jpg);";
+                }elseif($classe=="Bardo"&&$gen=="Feminino"&&$raca=="Elfo-Noturno") {
+                    echo "url(fundos/elfan-barda.jpg);";
+                }elseif($classe=="Bardo"&&$gen=="Masculino"&&$raca=="Goblin") {
+                    echo "url(fundos/goblin-bardo.jpg);";
+                }elseif($classe=="Bardo"&&$gen=="Feminino"&&$raca=="Goblin") {
+                    echo "url(fundos/goblinf-barda.jpg);";                    
+                }
+                //BRUXO
+                elseif($classe=="Bruxo"&&$gen=="Masculino"&&$raca=="Humano") {
+                    echo "url(fundos/humano-bruxo.jpg);";
+                }elseif($classe=="Bruxo"&&$gen=="Feminino"&&$raca=="Humano") {
+                    echo "url(fundos/humana-bruxa.jpg);";
+                }elseif($classe=="Bruxo"&&$gen=="Masculino"&&$raca=="Elfo") {
+                    echo "url(fundos/elfo-bruxo.jpg);";
+                }elseif($classe=="Bruxo"&&$gen=="Feminino"&&$raca=="Elfo") {
+                    echo "url(fundos/elfa-bruxa.jpg);";
+                }elseif($classe=="Bruxo"&&$gen=="Masculino"&&$raca=="Anão") {
+                    echo "url(fundos/anao-bruxo.jpg);";
+                }elseif($classe=="Bruxo"&&$gen=="Feminino"&&$raca=="Anão") {
+                    echo "url(fundos/ana-bruxa.jpg);";
+                }elseif($classe=="Bruxo"&&$gen=="Masculino"&&$raca=="Orc") {
+                    echo "url(fundos/orc-bruxo.jpg);";
+                }elseif($classe=="Bruxo"&&$gen=="Feminino"&&$raca=="Orc") {
+                    echo "url(fundos/orcf-bruxa.jpg);";
+                }elseif($classe=="Bruxo"&&$gen=="Masculino"&&$raca=="Elfo-Noturno") {
+                    echo "url(fundos/elfon-bruxo.jpg);";
+                }elseif($classe=="Bruxo"&&$gen=="Feminino"&&$raca=="Elfo-Noturno") {
+                    echo "url(fundos/elfan-bruxa.jpg);";
+                }elseif($classe=="Bruxo"&&$gen=="Masculino"&&$raca=="Goblin") {
+                    echo "url(fundos/goblin-bruxo.jpg);";
+                }elseif($classe=="Bruxo"&&$gen=="Feminino"&&$raca=="Goblin") {
+                    echo "url(fundos/goblinf-bruxa.jpg);";                    
+                }
+                //CAÇADOR
+                elseif($classe=="Caçador"&&$gen=="Masculino"&&$raca=="Humano") {
+                    echo "url(fundos/humano-cacador.jpg);";
+                }elseif($classe=="Caçador"&&$gen=="Feminino"&&$raca=="Humano") {
+                    echo "url(fundos/humana-cacadora.jpg);";
+                }elseif($classe=="Caçador"&&$gen=="Masculino"&&$raca=="Elfo") {
+                    echo "url(fundos/elfo-cacador.jpg);";
+                }elseif($classe=="Caçador"&&$gen=="Feminino"&&$raca=="Elfo") {
+                    echo "url(fundos/elfa-cacadora.jpg);";
+                }elseif($classe=="Caçador"&&$gen=="Masculino"&&$raca=="Anão") {
+                    echo "url(fundos/anao-cacador.jpg);";
+                }elseif($classe=="Caçador"&&$gen=="Feminino"&&$raca=="Anão") {
+                    echo "url(fundos/ana-cacadora.jpg);";
+                }elseif($classe=="Caçador"&&$gen=="Masculino"&&$raca=="Orc") {
+                    echo "url(fundos/orc-cacador.jpg);";
+                }elseif($classe=="Caçador"&&$gen=="Feminino"&&$raca=="Orc") {
+                    echo "url(fundos/orcf-cacadora.jpg);";
+                }elseif($classe=="Caçador"&&$gen=="Masculino"&&$raca=="Elfo-Noturno") {
+                    echo "url(fundos/elfon-cacador.jpg);";
+                }elseif($classe=="Caçador"&&$gen=="Feminino"&&$raca=="Elfo-Noturno") {
+                    echo "url(fundos/elfan-cacadora.jpg);";
+                }elseif($classe=="Caçador"&&$gen=="Masculino"&&$raca=="Goblin") {
+                    echo "url(fundos/goblin-cacador.jpg);";
+                }elseif($classe=="Caçador"&&$gen=="Feminino"&&$raca=="Goblin") {
+                    echo "url(fundos/goblinf-cacadora.jpg);";                    
+                }
+                //CLÉRIGO
+                elseif($classe=="Clérigo"&&$gen=="Masculino"&&$raca=="Humano") {
+                    echo "url(fundos/humano-clerigo.jpg);";
+                }elseif($classe=="Clérigo"&&$gen=="Feminino"&&$raca=="Humano") {
+                    echo "url(fundos/humana-cleriga.jpg);";
+                }elseif($classe=="Clérigo"&&$gen=="Masculino"&&$raca=="Elfo") {
+                    echo "url(fundos/elfo-clerigo.jpg);";
+                }elseif($classe=="Clérigo"&&$gen=="Feminino"&&$raca=="Elfo") {
+                    echo "url(fundos/elfa-cleriga.jpg);";
+                }elseif($classe=="Clérigo"&&$gen=="Masculino"&&$raca=="Anão") {
+                    echo "url(fundos/anao-clerigo.jpg);";
+                }elseif($classe=="Clérigo"&&$gen=="Feminino"&&$raca=="Anão") {
+                    echo "url(fundos/ana-cleriga.jpg);";
+                }elseif($classe=="Clérigo"&&$gen=="Masculino"&&$raca=="Orc") {
+                    echo "url(fundos/orc-clerigo.jpg);";
+                }elseif($classe=="Clérigo"&&$gen=="Feminino"&&$raca=="Orc") {
+                    echo "url(fundos/orcf-cleriga.jpg);";
+                }elseif($classe=="Clérigo"&&$gen=="Masculino"&&$raca=="Elfo-Noturno") {
+                    echo "url(fundos/elfon-clerigo.jpg);";
+                }elseif($classe=="Clérigo"&&$gen=="Feminino"&&$raca=="Elfo-Noturno") {
+                    echo "url(fundos/elfan-cleriga.jpg);";
+                }elseif($classe=="Clérigo"&&$gen=="Masculino"&&$raca=="Goblin") {
+                    echo "url(fundos/goblin-clerigo.jpg);";
+                }elseif($classe=="Clérigo"&&$gen=="Feminino"&&$raca=="Goblin") {
+                    echo "url(fundos/goblinf-cleriga.jpg);";                    
+                }
+                //DRUIDA
+                elseif($classe=="Druida"&&$gen=="Masculino"&&$raca=="Humano") {
+                    echo "url(fundos/humano-druida.jpg);";
+                }elseif($classe=="Druida"&&$gen=="Feminino"&&$raca=="Humano") {
+                    echo "url(fundos/humana-druida.jpg);";
+                }elseif($classe=="Druida"&&$gen=="Masculino"&&$raca=="Elfo") {
+                    echo "url(fundos/elfo-druida.jpg);";
+                }elseif($classe=="Druida"&&$gen=="Feminino"&&$raca=="Elfo") {
+                    echo "url(fundos/elfa-druida.jpg);";
+                }elseif($classe=="Druida"&&$gen=="Masculino"&&$raca=="Anão") {
+                    echo "url(fundos/anao-druida.jpg);";
+                }elseif($classe=="Druida"&&$gen=="Feminino"&&$raca=="Anão") {
+                    echo "url(fundos/ana-druida.jpg);";
+                }elseif($classe=="Druida"&&$gen=="Masculino"&&$raca=="Orc") {
+                    echo "url(fundos/orc-druida.jpg);";
+                }elseif($classe=="Druida"&&$gen=="Feminino"&&$raca=="Orc") {
+                    echo "url(fundos/orcf-druida.jpg);";
+                }elseif($classe=="Druida"&&$gen=="Masculino"&&$raca=="Elfo-Noturno") {
+                    echo "url(fundos/elfon-druida.jpg);";
+                }elseif($classe=="Druida"&&$gen=="Feminino"&&$raca=="Elfo-Noturno") {
+                    echo "url(fundos/elfan-druida.jpg);";
+                }elseif($classe=="Druida"&&$gen=="Masculino"&&$raca=="Goblin") {
+                    echo "url(fundos/goblin-druida.jpg);";
+                }elseif($classe=="Druida"&&$gen=="Feminino"&&$raca=="Goblin") {
+                    echo "url(fundos/goblinf-druida.jpg);";                    
+                }
+                //FEITICEIRO
+                elseif($classe=="Feiticeiro"&&$gen=="Masculino"&&$raca=="Humano") {
+                    echo "url(fundos/humano-feiticeiro.jpg);";
+                }elseif($classe=="Feiticeiro"&&$gen=="Feminino"&&$raca=="Humano") {
+                    echo "url(fundos/humana-feiticeira.jpg);";
+                }elseif($classe=="Feiticeiro"&&$gen=="Masculino"&&$raca=="Elfo") {
+                    echo "url(fundos/elfo-feiticeiro.jpg);";
+                }elseif($classe=="Feiticeiro"&&$gen=="Feminino"&&$raca=="Elfo") {
+                    echo "url(fundos/elfa-feiticeira.jpg);";
+                }elseif($classe=="Feiticeiro"&&$gen=="Masculino"&&$raca=="Anão") {
+                    echo "url(fundos/anao-feiticeiro.jpg);";
+                }elseif($classe=="Feiticeiro"&&$gen=="Feminino"&&$raca=="Anão") {
+                    echo "url(fundos/ana-feiticeira.jpg);";
+                }elseif($classe=="Feiticeiro"&&$gen=="Masculino"&&$raca=="Orc") {
+                    echo "url(fundos/orc-feiticeiro.jpg);";
+                }elseif($classe=="Feiticeiro"&&$gen=="Feminino"&&$raca=="Orc") {
+                    echo "url(fundos/orcf-feiticeira.jpg);";
+                }elseif($classe=="Feiticeiro"&&$gen=="Masculino"&&$raca=="Elfo-Noturno") {
+                    echo "url(fundos/elfon-feiticeiro.jpg);";
+                }elseif($classe=="Feiticeiro"&&$gen=="Feminino"&&$raca=="Elfo-Noturno") {
+                    echo "url(fundos/elfan-feiticeira.jpg);";
+                }elseif($classe=="Feiticeiro"&&$gen=="Masculino"&&$raca=="Goblin") {
+                    echo "url(fundos/goblin-feiticeiro.jpg);";
+                }elseif($classe=="Feiticeiro"&&$gen=="Feminino"&&$raca=="Goblin") {
+                    echo "url(fundos/goblinf-feiticeira.jpg);";                    
+                }
+                //GUERREIRO
+                elseif($classe=="Guerreiro"&&$gen=="Masculino"&&$raca=="Humano") {
+                    echo "url(fundos/humano-guerreiro.jpg);";
+                }elseif($classe=="Guerreiro"&&$gen=="Feminino"&&$raca=="Humano") {
+                    echo "url(fundos/humana-guerreira.jpg);";
+                }elseif($classe=="Guerreiro"&&$gen=="Masculino"&&$raca=="Elfo") {
+                    echo "url(fundos/elfo-guerreiro.jpg);";
+                }elseif($classe=="Guerreiro"&&$gen=="Feminino"&&$raca=="Elfo") {
+                    echo "url(fundos/elfa-guerreira.jpg);";
+                }elseif($classe=="Guerreiro"&&$gen=="Masculino"&&$raca=="Anão") {
+                    echo "url(fundos/anao-guerreiro.jpg);";
+                }elseif($classe=="Guerreiro"&&$gen=="Feminino"&&$raca=="Anão") {
+                    echo "url(fundos/ana-guerreira.jpg);";
+                }elseif($classe=="Guerreiro"&&$gen=="Masculino"&&$raca=="Orc") {
+                    echo "url(fundos/orc-guerreiro.jpg);";
+                }elseif($classe=="Guerreiro"&&$gen=="Feminino"&&$raca=="Orc") {
+                    echo "url(fundos/orcf-guerreira.jpg);";
+                }elseif($classe=="Guerreiro"&&$gen=="Masculino"&&$raca=="Elfo-Noturno") {
+                    echo "url(fundos/elfon-guerreiro.jpg);";
+                }elseif($classe=="Guerreiro"&&$gen=="Feminino"&&$raca=="Elfo-Noturno") {
+                    echo "url(fundos/elfan-guerreira.jpg);";
+                }elseif($classe=="Guerreiro"&&$gen=="Masculino"&&$raca=="Goblin") {
+                    echo "url(fundos/goblin-guerreiro.jpg);";
+                }elseif($classe=="Guerreiro"&&$gen=="Feminino"&&$raca=="Goblin") {
+                    echo "url(fundos/goblinf-guerreira.jpg);";                    
+                }
+                //LADINO
+                elseif($classe=="Ladino"&&$gen=="Masculino"&&$raca=="Humano") {
+                    echo "url(fundos/humano-ladino.jpg);";
+                }elseif($classe=="Ladino"&&$gen=="Feminino"&&$raca=="Humano") {
+                    echo "url(fundos/humana-ladina.jpg);";
+                }elseif($classe=="Ladino"&&$gen=="Masculino"&&$raca=="Elfo") {
+                    echo "url(fundos/elfo-ladino.jpg);";
+                }elseif($classe=="Ladino"&&$gen=="Feminino"&&$raca=="Elfo") {
+                    echo "url(fundos/elfa-ladina.jpg);";
+                }elseif($classe=="Ladino"&&$gen=="Masculino"&&$raca=="Anão") {
+                    echo "url(fundos/anao-ladino.jpg);";
+                }elseif($classe=="Ladino"&&$gen=="Feminino"&&$raca=="Anão") {
+                    echo "url(fundos/ana-ladina.jpg);";
+                }elseif($classe=="Ladino"&&$gen=="Masculino"&&$raca=="Orc") {
+                    echo "url(fundos/orc-ladino.jpg);";
+                }elseif($classe=="Ladino"&&$gen=="Feminino"&&$raca=="Orc") {
+                    echo "url(fundos/orcf-ladina.jpg);";
+                }elseif($classe=="Ladino"&&$gen=="Masculino"&&$raca=="Elfo-Noturno") {
+                    echo "url(fundos/elfon-ladino.jpg);";
+                }elseif($classe=="Ladino"&&$gen=="Feminino"&&$raca=="Elfo-Noturno") {
+                    echo "url(fundos/elfan-ladina.jpg);";
+                }elseif($classe=="Ladino"&&$gen=="Masculino"&&$raca=="Goblin") {
+                    echo "url(fundos/goblin-ladino.jpg);";
+                }elseif($classe=="Ladino"&&$gen=="Feminino"&&$raca=="Goblin") {
+                    echo "url(fundos/goblinf-ladina.jpg);";                    
+                }
+                //MAGO
+                elseif($classe=="Mago"&&$gen=="Masculino"&&$raca=="Humano") {
+                    echo "url(fundos/humano-mago.jpg);";
+                }elseif($classe=="Mago"&&$gen=="Feminino"&&$raca=="Humano") {
+                    echo "url(fundos/humana-maga.jpg);";
+                }elseif($classe=="Mago"&&$gen=="Masculino"&&$raca=="Elfo") {
+                    echo "url(fundos/elfo-mago.jpg);";
+                }elseif($classe=="Mago"&&$gen=="Feminino"&&$raca=="Elfo") {
+                    echo "url(fundos/elfa-maga.jpg);";
+                }elseif($classe=="Mago"&&$gen=="Masculino"&&$raca=="Anão") {
+                    echo "url(fundos/anao-mago.jpg);";
+                }elseif($classe=="Mago"&&$gen=="Feminino"&&$raca=="Anão") {
+                    echo "url(fundos/ana-maga.jpg);";
+                }elseif($classe=="Mago"&&$gen=="Masculino"&&$raca=="Orc") {
+                    echo "url(fundos/orc-mago.jpg);";
+                }elseif($classe=="Mago"&&$gen=="Feminino"&&$raca=="Orc") {
+                    echo "url(fundos/orcf-maga.jpg);";
+                }elseif($classe=="Mago"&&$gen=="Masculino"&&$raca=="Elfo-Noturno") {
+                    echo "url(fundos/elfon-mago.jpg);";
+                }elseif($classe=="Mago"&&$gen=="Feminino"&&$raca=="Elfo-Noturno") {
+                    echo "url(fundos/elfan-maga.jpg);";
+                }elseif($classe=="Mago"&&$gen=="Masculino"&&$raca=="Goblin") {
+                    echo "url(fundos/goblin-mago.jpg);";
+                }elseif($classe=="Mago"&&$gen=="Feminino"&&$raca=="Goblin") {
+                    echo "url(fundos/goblinf-maga.jpg);";                    
+                }
+                //MONGE
+                elseif($classe=="Monge"&&$gen=="Masculino"&&$raca=="Humano") {
+                    echo "url(fundos/humano-monge.jpg);";
+                }elseif($classe=="Monge"&&$gen=="Feminino"&&$raca=="Humano") {
+                    echo "url(fundos/humana-monja.jpg);";
+                }elseif($classe=="Monge"&&$gen=="Masculino"&&$raca=="Elfo") {
+                    echo "url(fundos/elfo-monge.jpg);";
+                }elseif($classe=="Monge"&&$gen=="Feminino"&&$raca=="Elfo") {
+                    echo "url(fundos/elfa-monja.jpg);";
+                }elseif($classe=="Monge"&&$gen=="Masculino"&&$raca=="Anão") {
+                    echo "url(fundos/anao-monge.jpg);";
+                }elseif($classe=="Monge"&&$gen=="Feminino"&&$raca=="Anão") {
+                    echo "url(fundos/ana-monja.jpg);";
+                }elseif($classe=="Monge"&&$gen=="Masculino"&&$raca=="Orc") {
+                    echo "url(fundos/orc-monge.jpg);";
+                }elseif($classe=="Monge"&&$gen=="Feminino"&&$raca=="Orc") {
+                    echo "url(fundos/orcf-monja.jpg);";
+                }elseif($classe=="Monge"&&$gen=="Masculino"&&$raca=="Elfo-Noturno") {
+                    echo "url(fundos/elfon-monge.jpg);";
+                }elseif($classe=="Monge"&&$gen=="Feminino"&&$raca=="Elfo-Noturno") {
+                    echo "url(fundos/elfan-monja.jpg);";
+                }elseif($classe=="Monge"&&$gen=="Masculino"&&$raca=="Goblin") {
+                    echo "url(fundos/goblin-monge.jpg);";
+                }elseif($classe=="Monge"&&$gen=="Feminino"&&$raca=="Goblin") {
+                    echo "url(fundos/goblinf-monja.jpg);";                    
+                }
+                //PALADINO
+                elseif($classe=="Paladino"&&$gen=="Masculino"&&$raca=="Humano") {
+                    echo "url(fundos/humano-paladino.jpg);";
+                }elseif($classe=="Paladino"&&$gen=="Feminino"&&$raca=="Humano") {
+                    echo "url(fundos/humana-paladina.jpg);";
+                }elseif($classe=="Paladino"&&$gen=="Masculino"&&$raca=="Elfo") {
+                    echo "url(fundos/elfo-paladino.jpg);";
+                }elseif($classe=="Paladino"&&$gen=="Feminino"&&$raca=="Elfo") {
+                    echo "url(fundos/elfa-paladina.jpg);";
+                }elseif($classe=="Paladino"&&$gen=="Masculino"&&$raca=="Anão") {
+                    echo "url(fundos/anao-paladino.jpg);";
+                }elseif($classe=="Paladino"&&$gen=="Feminino"&&$raca=="Anão") {
+                    echo "url(fundos/ana-paladina.jpg);";
+                }elseif($classe=="Paladino"&&$gen=="Masculino"&&$raca=="Orc") {
+                    echo "url(fundos/orc-paladino.jpg);";
+                }elseif($classe=="Paladino"&&$gen=="Feminino"&&$raca=="Orc") {
+                    echo "url(fundos/orcf-paladina.jpg);";
+                }elseif($classe=="Paladino"&&$gen=="Masculino"&&$raca=="Elfo-Noturno") {
+                    echo "url(fundos/elfon-paladino.jpg);";
+                }elseif($classe=="Paladino"&&$gen=="Feminino"&&$raca=="Elfo-Noturno") {
+                    echo "url(fundos/elfan-paladina.jpg);";
+                }elseif($classe=="Paladino"&&$gen=="Masculino"&&$raca=="Goblin") {
+                    echo "url(fundos/goblin-paladino.jpg);";
+                }elseif($classe=="Paladino"&&$gen=="Feminino"&&$raca=="Goblin") {
+                    echo "url(fundos/goblinf-paladina.jpg);";                    
                 }
                 ?>
         }

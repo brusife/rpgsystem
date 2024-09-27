@@ -66,7 +66,8 @@ main {
     display: flex;
     flex-flow: column nowrap;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-position: center top;
+    background-size: cover;
     flex-basis: 544px;
     text-align: center;
     justify-content: flex-end;
