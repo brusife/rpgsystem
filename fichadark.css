@@ -41,7 +41,7 @@
 
 
 body {
-    background: black url(fundos/fundoficha.jpg);
+    background: black url(fundoficha.jpg);
     background-position: center top;
     background-attachment: fixed;
     background-size: cover;
@@ -65,9 +65,8 @@ main {
     height: 447px;
     display: flex;
     flex-flow: column nowrap;
-    background-position: center center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     flex-basis: 544px;
     text-align: center;
     justify-content: flex-end;

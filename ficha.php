@@ -20,56 +20,13 @@
                 $classe = $_GET["classe"];
                 $gen = $_GET["genero"];
 
-                if($classe=="Bárbaro"&&$gen=="Masculino") {
-                    echo "url(fundos/barbaro.jpg)";
-                }elseif($classe=="Bárbaro"&&$gen=="Feminino") {
-                    echo "url(fundos/barbara.jpg)";
-                }elseif($classe=="Bardo"&&$gen=="Masculino") {
-                    echo "url(fundos/bardo.jpg)";
-                }elseif($classe=="Bardo"&&$gen=="Feminino") {
-                    echo "url(fundos/barda.jpg)";
-                }elseif($classe=="Bruxo"&&$gen=="Masculino") {
-                    echo "url(fundos/bruxo.jpg)";
-                }elseif($classe=="Bruxo"&&$gen=="Feminino") {
-                    echo "url(fundos/bruxa.jpg)";
-                }elseif($classe=="Caçador"&&$gen=="Masculino") {
-                    echo "url(fundos/cacador.jpg)";
-                }elseif($classe=="Caçador"&&$gen=="Feminino") {
-                    echo "url(fundos/cacadora.jpg)";
-                }elseif($classe=="Clérigo"&&$gen=="Masculino") {
-                    echo "url(fundos/clerigo.jpg)";
-                }elseif($classe=="Clérigo"&&$gen=="Feminino") {
-                    echo "url(fundos/cleriga.jpg)";
-                }elseif($classe=="Druida"&&$gen=="Masculino") {
-                    echo "url(fundos/druidam.jpg)";
-                }elseif($classe=="Druida"&&$gen=="Feminino") {
-                    echo "url(fundos/druidaf.jpg)";
-                }elseif($classe=="Feiticeiro"&&$gen=="Masculino") {
-                    echo "url(fundos/feiticeiro.jpg)";
-                }elseif($classe=="Feiticeiro"&&$gen=="Feminino") {
-                    echo "url(fundos/feiticeira.jpg)";
-                }elseif($classe=="Guerreiro"&&$gen=="Masculino") {
-                    echo "url(fundos/guerreiro.jpg)";
-                }elseif($classe=="Guerreiro"&&$gen=="Feminino") {
-                    echo "url(fundos/guerreira.jpg)";
-                }elseif($classe=="Ladino"&&$gen=="Masculino") {
-                    echo "url(fundos/ladino.jpg)";
-                }elseif($classe=="Ladino"&&$gen=="Feminino") {
-                    echo "url(fundos/ladina.jpg)";
-                }elseif($classe=="Mago"&&$gen=="Masculino") {
-                    echo "url(fundos/mago.jpg)";
-                }elseif($classe=="Mago"&&$gen=="Feminino") {
-                    echo "url(fundos/maga.jpg)";
-                }elseif($classe=="Monge"&&$gen=="Masculino") {
-                    echo "url(fundos/monge.jpg)";
-                }elseif($classe=="Monge"&&$gen=="Feminino") {
-                    echo "url(fundos/monja.jpg)";
-                }elseif($classe=="Paladino"&&$gen=="Masculino") {
-                    echo "url(fundos/barbara.jpg)";
-                }elseif($classe=="Paladino"&&$gen=="Feminino") {
-                    echo "url(fundos/barbara.jpg)";
+                if($classe=="Bárbaro"&&$gen=="Masculino"&&$raca=="Humano") {
+                    echo "url(fundos/humano-barbaro.jpg);";
+                }elseif($classe=="Bárbaro"&&$gen=="Feminino"&&$$raca=="Humano") {
+                    echo "url(fundos/humana-barbara.jfif);";
+                }elseif($classe=="Bárbaro"&&$gen=="Masculino"&&$$raca=="Elfo") {
+                    echo "url(fundos/elfo-barbaro.jfif);";
                 }
-                
                 ?>
         }
     </style>
