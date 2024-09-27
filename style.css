@@ -23,7 +23,7 @@
 }
 
 body {
-    background: black url(fundos/inicio.jpg);
+    background: black url(capa.jpg);
     background-position: center center;
     background-attachment: fixed;
     background-size: cover;
