@@ -10,20 +10,78 @@
 <body>
     
     <div class="container">
-        <div class="item"><img src="logo.png" alt="RPG System" width="200px"></div>
+        <div class="item" id="logo"><img src="logo.png" alt="RPG System" width="200px"></div>
         <div class="item" id="principal">
-            <h1>Sobre </h1>
+            <h1>Informações </h1>
             <hr>
-            <p>É um sistema feito em linguagem PHP por Bruno Simon Ferreira, estudante de desenvolvimento front-end, que também é designer e ilustrador. <br>
-            Através do sistema, você pode criar uma ficha personalizada de RPG inicial, para jogar com seus amigos.
-            <br>
-            Depois de gerar a ficha, você pode imprimir ou gerar o PDF da sua ficha.
-            <br>
-            Todas as imagens feitas nessa ficha foram criadas pela Inteligência Artifical Copilot da Microsoft.</p>
+            <p><span>RPG System</span> é um sistema feito em linguagem PHP por <a href="https://www.linkedin.com/in/brunosimonferreira/" target="_blank">Bruno Simon</a>, estudante de desenvolvimento front-end, que também é designer e ilustrador.</p>
+            <p>Através do sistema, você pode criar uma ficha personalizada de RPG inicial, para jogar com seus amigos. Depois de gerar a ficha, você pode imprimir ou gerar o PDF da sua ficha.</p>
+            <p>São mais de 140 combinações de artes para as fichas, que vai mudar pra cada raça, gênero e classe do(a) personagem.</p>
+            <div class="slideshow-container">
+
+                <div class="mySlides fade">
+                  <div class="numbertext">1 / 3</div>
+                  <img src="slide/humano-paladino.jpg" style="width:100%">
+                  <div class="text">Você pode criar um Homem Paladino</div>
+                </div>
+                
+                <div class="mySlides fade">
+                  <div class="numbertext">2 / 3</div>
+                  <img src="slide/elfan-ladina.jpg" style="width:100%">
+                  <div class="text">Uma Elfa Noturna Ladina</div>
+                </div>
+                
+                <div class="mySlides fade">
+                  <div class="numbertext">3 / 3</div>
+                  <img src="slide/goblin-bardo.jpg" style="width:100%">
+                  <div class="text">Ou um Bardo da raça Goblin</div>
+                </div>
+                
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+                
+                </div>
+                <br>
+                
+                <div style="text-align:center">
+                  <span class="dot" onclick="currentSlide(1)"></span> 
+                  <span class="dot" onclick="currentSlide(2)"></span> 
+                  <span class="dot" onclick="currentSlide(3)"></span> 
+                </div>
+                
+                <script>
+                let slideIndex = 1;
+                showSlides(slideIndex);
+                
+                function plusSlides(n) {
+                  showSlides(slideIndex += n);
+                }
+                
+                function currentSlide(n) {
+                  showSlides(slideIndex = n);
+                }
+                
+                function showSlides(n) {
+                  let i;
+                  let slides = document.getElementsByClassName("mySlides");
+                  let dots = document.getElementsByClassName("dot");
+                  if (n > slides.length) {slideIndex = 1}    
+                  if (n < 1) {slideIndex = slides.length}
+                  for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                  }
+                  for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                  }
+                  slides[slideIndex-1].style.display = "block";  
+                  dots[slideIndex-1].className += " active";
+                }
+                </script>
+            <p>Todas as imagens feitas nessa ficha foram criadas pela <a href="https://copilot.microsoft.com/images/create" target="_blank">Inteligência Artifical Copilot da Microsoft</a>.</p>
             
         </div>
         
-        <a href="principal.html">Crie sua ficha agora mesmo!</a>
+        <a href="principal.html" id="botao">Crie sua ficha agora mesmo!</a>
     </div>
 
 </body>

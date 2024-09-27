@@ -91,6 +91,10 @@ hr {
     padding: 5px;
 }
 
+.item p {
+    padding: 2px;
+}
+
 #bloco2 {
     display: flex;
     flex-flow: row wrap;
@@ -101,7 +105,14 @@ p {
     font-size: 1.1em;
 }
 
+.linha {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .barra {
+    flex-basis: 275px;
     padding: 3px;
     margin-left: 5px;
     height: 3px;
@@ -122,11 +133,9 @@ textarea {
 }
 
 .botao {
-    width: 170px;
-    height: 64px;
-    background: url(icones/criar.png);
-    background-repeat: no-repeat;
+    background: rgba(0, 0, 0, 0);
     cursor: pointer;
+    padding: 5px;
     border-style: none;
     font-family: var(--principal);
     font-size: 1.5em;
@@ -155,9 +164,6 @@ textarea {
         padding: 5px;
     }
 
-    .botao {
-        width: 100px;
-        background-size: contain;
-    }
+    
     
 }
