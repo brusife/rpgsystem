@@ -20,56 +20,72 @@
                 </div>
                 <div class="item">
                     <p><label for="nome">Nome: </label><input type="text" name="nome" id="nome" autocomplete="off" maxlength="30" required placeholder="até 30 caracteres"></p>
-                    <hr>
                 </div>
-                <div class="item" id="bloco2">
-                    <p>Gênero:
-                        <select name="genero" id="menu">
-                            <option>Masculino</option>
-                            <option>Feminino</option>
-                        </select>
-                    </p>
-                    <hr>
-                    <p>Raça:
-                        <select name="raca" id="menu">
-                            <option>Humano</option>
-                            <option>Elfo</option>
-                            <option>Anão</option>
-                            <option>Orc</option>
-                            <option>Elfo-Noturno</option>
-                            <option>Goblin</option>
-                        </select>
-                    </p>
-                    <hr>
-                    <p>Classe: 
-                        <select name="classe" id="menu">
-                            <option>Bárbaro</option>
-                            <option>Bardo</option>
-                            <option>Bruxo</option>
-                            <option>Caçador</option>
-                            <option>Clérigo</option>
-                            <option>Druida</option>
-                            <option>Feiticeiro</option>
-                            <option>Guerreiro</option>
-                            <option>Ladino</option>
-                            <option>Mago</option>
-                            <option>Monge</option>
-                            <option>Paladino</option>
-                        </select>
-                    </p>
+                <div class="item">
+                    <div class="itemi">
+                        <div class="subi">
+                            Gênero:
+                                <select name="genero" id="menu">
+                                    <option>Masculino</option>
+                                    <option>Feminino</option>
+                                </select>
+                        </div>
+                        
+                        <div class="subi">
+                            Raça:
+                                <select name="raca" id="menu">
+                                    <option>Humano</option>
+                                    <option>Elfo</option>
+                                    <option>Anão</option>
+                                    <option>Orc</option>
+                                    <option>Elfo-Noturno</option>
+                                    <option>Goblin</option>
+                                </select>
+                        </div>
+                        
+                        <div class="subi">
+                            Classe:
+                                <select name="classe" id="menu">
+                                    <option>Bárbaro</option>
+                                    <option>Bardo</option>
+                                    <option>Bruxo</option>
+                                    <option>Caçador</option>
+                                    <option>Clérigo</option>
+                                    <option>Druida</option>
+                                    <option>Feiticeiro</option>
+                                    <option>Guerreiro</option>
+                                    <option>Ladino</option>
+                                    <option>Mago</option>
+                                    <option>Monge</option>
+                                    <option>Paladino</option>
+                                </select>
+                        </div>
+                    </div>
+                    
 
-                    <div class="item"><h1>Atributos</h1>
-            
-                        <hr>
-                    <p class="linha"><img src="icones/forca.png" alt="ícone de força" height="18px"> Força <input type="range" name="for" id="ifor" class="barra" min="0" max="10" step="1" value="5" oninput="vfor.innerHTML = Number(ifor.value)"><output id="vfor">5</output><hr></p>
-                    <p class="linha"><img src="icones/destreza.png" alt="ícone de destreza" height="18px"> Destreza <input type="range" name="dex" id="idex" class="barra" min="0" max="10" step="1" value="5" oninput="vdes.innerHTML = Number(idex.value)"><output id="vdes">5</output><hr></p>
-                    <p class="linha"><img src="icones/agilidade.png" alt="ícone de agilidade" height="18px"> Agilidade <input type="range" name="agi" id="iagi" class="barra" min="0" max="10" step="1" value="5" oninput="vagi.innerHTML = Number(iagi.value)"><output id="vagi">5</output><hr></p>
-                    <p class="linha"><img src="icones/inteligencia.png" alt="ícone de inteligência" height="18px"> Inteligência <input type="range" name="int" id="iint" class="barra" min="0" max="10" step="1" value="5" oninput="vint.innerHTML = Number(iint.value)"><output id="vint">5</output><hr></p>
-                    <p class="linha"><img src="icones/devocao.png" alt="ícone de devoção" height="18px"> Devoção <input type="range" name="dev" id="idev" class="barra" min="0" max="10" step="1" value="5" oninput="vdev.innerHTML = Number(idev.value)"><output id="vdev">5</output><hr></p>
-                    <p class="linha"><img src="icones/sorte.png" alt="ícone de sorte" height="18px"> Sorte <input type="range" name="sor" id="isor" class="barra" min="0" max="10" step="1" value="5" oninput="vsor.innerHTML = Number(isor.value)"><output id="vsor">5</output><hr></p>
+                    <div class="atributos">
+                        <div class="suba"><h1>Atributos Físicos</h1>
+                            <hr>
+                        <div class="subs">
+                            <p><img src="icones/constituicao.png" alt="ícone de constituição" height="18px"> Constituição <input type="number" name="con" id="icon" class="valores" min="0" max="10" step="1" value="5"></p>
+                           <p><img src="icones/forca.png" alt="ícone de força" height="18px"> Força <input type="number" name="for" id="ifor"  class="valores" min="0" max="10" step="1" value="5"></p>
+                            <p><img src="icones/destreza.png" alt="ícone de destreza" height="18px"> Destreza <input type="number" name="dex" class="valores" id="idex" min="0" max="10" step="1" value="5"></p>
+                            <p><img src="icones/agilidade.png" alt="ícone de agilidade" height="18px"> Agilidade <input type="number" class="valores" name="agi" id="iagi" min="0" max="10" step="1" value="5"></p>
+                            </div>
+                        </div>
+                        <div class="suba" ><h1>Atributos Mentais</h1>
+                            <hr>
+                        <div class="subs">
+                            <p><img src="icones/inteligencia.png" alt="ícone de inteligência" height="18px"> Inteligência <input type="number" name="int" id="iint" min="0" max="10" step="1" value="5" class="valores"></p>
+                            <p><img src="icones/forcadevontade.png" alt="ícone de força de vontade" height="18px"> Força de Vontade <input type="number" name="forv" id="iforv"  min="0" max="10" step="1" value="5"class="valores"></p>
+                            <p><img src="icones/carisma.png" alt="ícone de carisma" height="18px"> Carisma <input type="number" name="car" id="icar" min="0" max="10" step="1" value="5" class="valores"></p>
+                            <p><img src="icones/percepcao.png" alt="ícone de percepção" height="18px"> Percepção <input type="number" name="per" id="iper" min="0" max="10" step="1" value="5" class="valores"></p>
+                        </div>
+                        </div>
                     </div>
             
-                    <div class="item"><h1>Descrição</h1>
+                    <div class="item">
+                        <hr><h1>Descrição</h1>
             
                         <p><textarea name="info" id="info" cols="75" rows="6" maxlength="500">Descreva o(a) personagem em até 500(quinhentos) caracteres</textarea></p>
             

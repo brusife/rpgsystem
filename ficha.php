@@ -360,7 +360,7 @@
                 <hr>
             </div>
             <div class="subitem">
-                <h1>Atributos</h1>
+                <h1>Atributos Físicos</h1>
                 <p id="trib">
                     <?php
                     
@@ -453,7 +453,7 @@
                     <img src="icones/sorte.png" alt="ícone de sorte" class="icone"><span class="valor"> <?php echo $_GET["sor"]; ?> |</span>
                 </p>
                 <hr>
-                <h1>Bônus de classe</h1>
+                <h1>Bônus</h1>
                 <p id="trib"><?php echo $bonus;?></p>
                 <hr>
             </div>
