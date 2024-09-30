@@ -6,9 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RPG System - Ficha de Personagem</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <script src="https://unpkg.com/jspdf@latest/dist/jspdf.umd.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jspdf-html2canvas@latest/dist/jspdf-html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.2/html2pdf.bundle.min.js" integrity="sha512-MpDFIChbcXl2QgipQrt1VcPHMldRILetapBl5MPCA9Y8r7qvlwx1/Mc9hNTzY+kS5kX6PdoDq41ws1HiVNLdZA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="scripts.js" defer></script>
     <?php 
     $raca = $_GET["raca"];
     if ($raca=="Orc"||$raca=="Elfo-Noturno"||$raca=="Goblin"){
@@ -340,8 +339,8 @@
     </style>
     
 </head>
-<body class="Content" >
-    <main id="page">
+<body>
+    <main id="content">
         <div class="item">
             <div class="item"id="moldura">
                 <h1><?php
@@ -411,7 +410,7 @@
                         $sclasse = "Magia do Conhecimento";
                         $csclasse = "O mago conjura magias por meio de anos de estudo sobre os segredos arcanos do universo. São noites em claro estudando cada gesto e cada compontente. A magia para o mago é uma ciência, com escolas nas quais ele pode se especializar (como evocação, ilusão, necromancia…)<br> Normalmente, o mago possui um grimório, um livro onde ele anota as magias e seus requisitos. É de onde ele lê, memoriza, e prepara as magias que ele irá utilizar durante o dia.";
                     }elseif($classe=="Monge"){
-                        $sclasse = "A força o Chi";
+                        $sclasse = "A força do Chi";
                         $csclasse = "O monge é alguém que aperfeiçoou a si mesmo a níveis quase sobrenaturais, treinando corpo e mente para funcionarem beirando a perfeição. Eles não costumam utilizar nada além do corpo e da mente para se defender.<br> Os monges estudam uma energia que flui através dos corpos vivos, chamada de Chi. Essa energia permite que se crie efeitos mágicos e que uma pessoa exceda a capacidade física de seu corpo.";
                     }elseif($classe=="Paladino"){
                         $sclasse = "Guerreiros da Justiça";
@@ -455,34 +454,9 @@
         <div class="final">
             <p class="print">Ficha feita pelo site RPG System, criado por Bruno Simon Ferreira, dev front-end aprendiz</p>
             <a href="javascript:history.back()" class="botao">Fazer outro personagem</a>
-            <button class="botao" id="btn">Gerar PDF</button>
+            <button class="botao" id="generate-pdf">Gerar PDF</button>
         </div>
 
-
-        <script>
-            let btn = document.getElementById('btn');
-            let page = document.getElementById('page');
-            var myFont = new FontFace('DMSerifDisplay', 'url(fonts/DMSerifDisplay-Regular.ttf)');
-            
-
-            btn.addEventListener('click', function(){
-            html2PDF(page, {
-            jsPDF: {
-            unit: 'pt',
-            format: 'a4',
-            },
-            html2canvas: {
-                imageTimeout: 0,
-                logging: true,
-                scale:1.5,
-                letterRendering: 1,
-                margin: 0,
-            },
-            imageType: 'image/jpeg',
-            output: 'ficha.pdf',
-            });
-            });
-        </script>
     </main>  
 </body>
 </html>
