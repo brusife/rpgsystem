@@ -420,18 +420,71 @@
 
 
                     ?>
-                    <img src="icones/constituicao.png" alt="ícone de constituição" class="icone"><strong> CON </strong><span class="valor"> <?php echo $_GET["con"] ?> |</span>
-                    <img src="icones/forca.png" alt="ícone de força" class="icone"><strong> FOR </strong><span class="valor"> <?php echo $_GET["for"]; ?> |</span>
-                    <img src="icones/destreza.png" alt="ícone de destreza" class="icone"><strong> DES </strong><span class="valor"> <?php echo $_GET["dex"]; ?> |</span>
-                    <img src="icones/agilidade.png" alt="ícone de agilidade" class="icone"><strong> AGI </strong><span class="valor"> <?php echo $_GET["agi"]; ?> |</span>
+                    <?php
+                    if ($raca=="Orc"||$raca=="Elfo-Noturno"||$raca=="Goblin"){
+                        echo "<img src='icones/constituicaob.png' alt='ícone de força de constituição' class='icone'>";
+                    }else {
+                        echo "<img src='icones/constituicao.png' alt='ícone de força de constituição' class='icone'>";
+                    }
+                    ?> CON </strong><span class="valor"> <?php echo $_GET["con"] ?> |</span>
+                    <?php
+                    if ($raca=="Orc"||$raca=="Elfo-Noturno"||$raca=="Goblin"){
+                        echo "<img src='icones/forcab.png' alt='ícone de força de força' class='icone'>";
+                    }else {
+                        echo "<img src='icones/forca.png' alt='ícone de força de força' class='icone'>";
+                    }
+                    ?> FOR </strong><span class="valor"> <?php echo $_GET["for"]; ?> |</span>
+                    <?php
+                    if ($raca=="Orc"||$raca=="Elfo-Noturno"||$raca=="Goblin"){
+                        echo "<img src='icones/destrezab.png' alt='ícone de destreza' class='icone'>";
+                    }else {
+                        echo "<img src='icones/destreza.png' alt='ícone de destreza' class='icone'>";
+                    }
+                    ?> DES </strong><span class="valor"> <?php echo $_GET["dex"]; ?> |</span>
+                    <?php
+                    if ($raca=="Orc"||$raca=="Elfo-Noturno"||$raca=="Goblin"){
+                        echo "<img src='icones/agilidadeb.png' alt='ícone de agilidade' class='icone'>";
+                    }else {
+                        echo "<img src='icones/agilidade.png' alt='ícone de agilidade' class='icone'>";
+                    }
+                    ?> AGI </strong><span class="valor"> <?php echo $_GET["agi"]; ?> |</span>
                 </p>
                 <hr>
                 <h1>Atributos Mentais</h1>
                     <p id="trib">
-                        <img src="icones/inteligencia.png" alt="ícone de inteligência" class="icone"><strong> INT </strong><span class="valor"> <?php echo $_GET["int"] ?> |</span>
-                        <img src="icones/forcadevontade.png" alt="ícone de força de vontade" class="icone"><strong> FVE </strong><span class="valor"> <?php echo $_GET["forv"]; ?> |</span>
-                        <img src="icones/carisma.png" alt="ícone de carisma" class="icone"><strong> CAR </strong><span class="valor"> <?php echo $_GET["car"]; ?> |</span>
-                        <img src="icones/percepcao.png" alt="ícone de percepção" class="icone"><strong> PER </strong><span class="valor"> <?php echo $_GET["per"]; ?> |</span>
+                    
+                    
+                    <?php
+                    if ($raca=="Orc"||$raca=="Elfo-Noturno"||$raca=="Goblin"){
+                     echo "<img src='icones/inteligenciab.png' alt='ícone de inteligência' class='icone'>";
+                    }else {
+                        echo "<img src='icones/inteligencia.png' alt='ícone de inteligência' class='icone'>";
+                    }
+                    ?> <strong> INT </strong><span class="valor"> <?php echo $_GET["int"] ?> |</span>
+                    
+                    <?php
+                    if ($raca=="Orc"||$raca=="Elfo-Noturno"||$raca=="Goblin"){
+                        echo "<img src='icones/forcadevontadeb.png' alt='ícone de força de vontade' class='icone'>";
+                    }else {
+                        echo "<img src='icones/forcadevontade.png' alt='ícone de força de vontade' class='icone'>";
+                    }
+                    ?><strong> FVE </strong><span class="valor"> <?php echo $_GET["forv"]; ?> |</span>
+                    <?php
+                    if ($raca=="Orc"||$raca=="Elfo-Noturno"||$raca=="Goblin"){
+                        echo "<img src='icones/carismab.png' alt='ícone de força de carisma' class='icone'>";
+                    }else {
+                        echo "<img src='icones/carisma.png' alt='ícone de força de carisma' class='icone'>";
+                    }
+                    ?>
+                    <strong> CAR </strong><span class="valor"> <?php echo $_GET["car"]; ?> |</span>
+                    <?php
+                    if ($raca=="Orc"||$raca=="Elfo-Noturno"||$raca=="Goblin"){
+                        echo "<img src='icones/percepcaob.png' alt='ícone de força de percepção' class='icone'>";
+                    }else {
+                        echo "<img src='icones/percepcao.png' alt='ícone de força de percepção' class='icone'>";
+                    }
+                    ?>  
+                    PER </strong><span class="valor"> <?php echo $_GET["per"]; ?> |</span>
                     </p>
 
                 <hr>
