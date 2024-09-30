@@ -421,7 +421,7 @@
 
 
                     ?>
-                    <img src="icones/constituicao.png" alt="ícone de constituição" class="icone"><strong> CON </strong><span class="valor"><?php echo $_GET["con"] ?> |</span>
+                    <img src="icones/constituicao.png" alt="ícone de constituição" class="icone"><strong> CON </strong><span class="valor"> <?php echo $_GET["con"] ?> |</span>
                     <img src="icones/forca.png" alt="ícone de força" class="icone"><strong> FOR </strong><span class="valor"> <?php echo $_GET["for"]; ?> |</span>
                     <img src="icones/destreza.png" alt="ícone de destreza" class="icone"><strong> DES </strong><span class="valor"> <?php echo $_GET["dex"]; ?> |</span>
                     <img src="icones/agilidade.png" alt="ícone de agilidade" class="icone"><strong> AGI </strong><span class="valor"> <?php echo $_GET["agi"]; ?> |</span>
@@ -429,7 +429,7 @@
                 <hr>
                 <h1>Atributos Mentais</h1>
                     <p id="trib">
-                        <img src="icones/inteligencia.png" alt="ícone de inteligência" class="icone"><strong> INT </strong><span class="valor"><?php echo $_GET["int"] ?> |</span>
+                        <img src="icones/inteligencia.png" alt="ícone de inteligência" class="icone"><strong> INT </strong><span class="valor"> <?php echo $_GET["int"] ?> |</span>
                         <img src="icones/forcadevontade.png" alt="ícone de força de vontade" class="icone"><strong> FVE </strong><span class="valor"> <?php echo $_GET["forv"]; ?> |</span>
                         <img src="icones/carisma.png" alt="ícone de carisma" class="icone"><strong> CAR </strong><span class="valor"> <?php echo $_GET["car"]; ?> |</span>
                         <img src="icones/percepcao.png" alt="ícone de percepção" class="icone"><strong> PER </strong><span class="valor"> <?php echo $_GET["per"]; ?> |</span>
@@ -462,6 +462,8 @@
         <script>
             let btn = document.getElementById('btn');
             let page = document.getElementById('page');
+            var myFont = new FontFace('DMSerifDisplay', 'url(fonts/DMSerifDisplay-Regular.ttf)');
+            
 
             btn.addEventListener('click', function(){
             html2PDF(page, {
@@ -470,14 +472,14 @@
             format: 'a4',
             },
             html2canvas: {
-            imageTimeout: 15000,
-            logging: true,
-            scale:1.5,
-            width: 950,
-            margin: 0,
+                imageTimeout: 0,
+                logging: true,
+                scale:1.5,
+                letterRendering: 1,
+                margin: 0,
             },
             imageType: 'image/jpeg',
-            output: 'ficha.pdf'
+            output: 'ficha.pdf',
             });
             });
         </script>
