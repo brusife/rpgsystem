@@ -132,9 +132,12 @@ p#sobre {
 }
 
 p#trib {
-    text-align: center;
+    text-align: justify;
 }
 
+strong {
+    font-size: 1.4em;
+}
 .final {
     display: flex;
     flex-flow: row;
